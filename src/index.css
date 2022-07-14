@@ -1,13 +1,123 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --primary: #2080be;
+    --secondary: hsl(27, 86%, 54%);
+    --accents: #bad232;
+    --text: #333333;
+    --white: white;
+    --gray: gray;
+    --font: 16px;
+    --transition: .3s linear;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    font-size: var(--font);
+    color: var(--text);
+}
+
+.topbar div {
+    font-size: 0.9rem;
+}
+
+a {
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.topbar a {
+    color: var(--accents);
+}
+
+.topbar a:hover {
+    color: var(--primary);
+}
+
+
+/**Navbar*/
+
+.navbar-brand img {
+    width: 30%;
+}
+
+nav {
+    border-bottom: 5px solid var(--accents);
+}
+
+
+/*slider*/
+
+.carusel-caption {
+    bottom: 6rem;
+}
+
+.carusel-item,
+h2 span {
+    color: var(--accents);
+}
+
+.carusel-item h2 {
+    line-height: 1;
+}
+
+.button {
+    background: var(--accents);
+    padding: 10px 30px;
+    color: var(--text);
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.button:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+
+/*products*/
+
+.holder {
+    overflow: hidden;
+}
+
+.products img {
+    transition: var(--transition);
+}
+
+.products img:hover {
+    transform: scale(1.1) rotate(2deg);
+}
+
+
+/*about*/
+
+.about i {
+    color: var(--accents);
+    text-shadow: 0 0 1px var(--text);
+    font-size: 2rem;
+}
+
+.about .border-dark {
+    transition: var(--transition);
+}
+
+.about .border-dark:hover {
+    background: var(--text);
+    color: var(--white);
+}
+
+
+/**discoveroff**/
+
+.discoverOff {
+    height: 80vh;
+    background-image: url('img/slide_2.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+footer a {
+    color: var(--accents);
+}
+
+footer a:hover {
+    color: var(--white);
 }
